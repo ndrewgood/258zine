@@ -15,7 +15,8 @@ const BuyPage = () => {
           <SEO title="Buy" />
           <div className="container">
           <Link to="/" className="black">Back home</Link>
-          <Cart />
+          
+          {typeof document !== 'undefined' ? <Cart /> : null}
 
           
           </div>

@@ -1,9 +1,7 @@
 import React, { useLayoutEffect } from 'react'
-import ShopifyBuy from "@shopify/buy-button-js"
 import { graphql, useStaticQuery } from 'gatsby'
-
-
 import { Base64 } from 'js-base64'
+import ShopifyBuy from "@shopify/buy-button-js"
 
 import "../styles/revert-buy-button.scss"
 
@@ -12,7 +10,7 @@ const ProductDetail = () => {
 }
 
 
-// const ProductDetail = typeof document !== `undefined` ? ({ product }) => {
+// const ProductDetail = typeof document !== 'undefined' ? ({ product }) => {
 //   useLayoutEffect(() => {
 
 //         const client = ShopifyBuy.buildClient({
