@@ -9,16 +9,17 @@ import "../styles/revert-buy-button.scss"
 
 const ProductDetail = ({ product }) => {
   useLayoutEffect(() => {
-      const client = ShopifyBuy.buildClient({
-          domain: "258-test.myshopify.com",
-          storefrontAccessToken: "106c29a8e7b0a5d0237cbcb80429183d"
-      })
-      const ui = ShopifyBuy.UI.init(client);
-      const decodded = Base64.decode(product.shopifyId);
-      const acutalId = decodded.replace("gid://shopify/Product/", "");
 
       //To avoid document error on host build
       if (typeof window !== "undefined") {
+        const client = ShopifyBuy.buildClient({
+          domain: "258-test.myshopify.com",
+          storefrontAccessToken: "106c29a8e7b0a5d0237cbcb80429183d"
+        })
+        const ui = ShopifyBuy.UI.init(client);
+        const decodded = Base64.decode(product.shopifyId);
+        const acutalId = decodded.replace("gid://shopify/Product/", "");
+        
         ui.createComponent("product", {
             id: acutalId,
             node: document.getElementById("button"),
