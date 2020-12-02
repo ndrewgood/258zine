@@ -18,10 +18,7 @@ const ProductDetail = ({ product }) => {
       const acutalId = decodded.replace("gid://shopify/Product/", "");
 
       //To avoid document error on host build
-      if (typeof window === "undefined" || !window.document) {
-        console.log(`bailing out of the useeffect. Going to continue to render??`)
-        return
-      } else {
+      if (typeof window !== "undefined") {
         ui.createComponent("product", {
             id: acutalId,
             node: document.getElementById("button"),
