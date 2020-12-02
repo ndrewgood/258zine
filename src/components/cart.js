@@ -7,7 +7,8 @@ import { Base64 } from 'js-base64'
 
 import "../styles/revert-buy-button.scss"
 
-const ProductDetail = ({ product }) => {
+
+const ProductDetail = typeof document !== `undefined` ? ({ product }) => {
   useLayoutEffect(() => {
 
         const client = ShopifyBuy.buildClient({
@@ -81,6 +82,8 @@ const ProductDetail = ({ product }) => {
   return (
           <div id="button"></div>
   )
+} : () => {
+ return null
 }
 
 const Cart = () => {
