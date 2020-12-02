@@ -22,13 +22,15 @@ class Scene extends React.Component {
     loadSVG(logo);
     const group = new THREE.Group();
 
+    // const helper = new THREE.GridHelper( 260, 20 );
+    // helper.rotation.x = Math.PI / 2;
+    // scene.add( helper );
+
 
     function loadSVG( url ) {
         const loader = new SVGLoader();
 
-        // const helper = new THREE.GridHelper( 160, 10 );
-        // helper.rotation.x = Math.PI / 2;
-        // scene.add( helper );
+
 
         loader.load( url, function ( data ) {
 
