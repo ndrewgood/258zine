@@ -21,65 +21,66 @@ const ProductDetail = ({ product }) => {
       if (typeof window === "undefined" || !window.document) {
         console.log(`bailing out of the useeffect. Going to continue to render??`)
         return
-      }
-
-      ui.createComponent("product", {
-          id: acutalId,
-          node: document.getElementById("button"),
-          options: {
-            "product": {
-              "styles": {
-                "buttonWithQuantity": {
-                  "text-align": "left"
-                },
-                "button": {
-                  "border": "1px solid rgb(118, 118, 118) !important",
-                  "font-size": "13px",
-                  "padding": "1px 6px",
-                  "color": "#000000",
-                  "background-color": "rgb(239, 239, 239)",
-                  ":hover": {
-                    "background-color": "rgb(215, 215, 215)"
+      } else {
+        ui.createComponent("product", {
+            id: acutalId,
+            node: document.getElementById("button"),
+            options: {
+              "product": {
+                "styles": {
+                  "buttonWithQuantity": {
+                    "text-align": "left"
                   },
-                  "transition": "none",
-                  "border-radius": "3px",
-                  "border-top-left-radius": "3px !important",
-                  "border-bottom-left-radius": "3px !important",
-                  "margin-left": "10px !important"
+                  "button": {
+                    "border": "1px solid rgb(118, 118, 118) !important",
+                    "font-size": "13px",
+                    "padding": "1px 6px",
+                    "color": "#000000",
+                    "background-color": "rgb(239, 239, 239)",
+                    ":hover": {
+                      "background-color": "rgb(215, 215, 215)"
+                    },
+                    "transition": "none",
+                    "border-radius": "3px",
+                    "border-top-left-radius": "3px !important",
+                    "border-bottom-left-radius": "3px !important",
+                    "margin-left": "10px !important"
+                  },
+                  "quantity": {
+                    "border": "1px solid rgb(118, 118, 118) !important",
+                    "border-radius": "3px !important"
+                  },
+                  "quantityInput": {
+                    "border": "none !important",
+                    "font-size": "13px",
+                    "padding": "0",
+                    "width": "30px !important"
+                  }
                 },
-                "quantity": {
-                  "border": "1px solid rgb(118, 118, 118) !important",
-                  "border-radius": "3px !important"
+                "buttonDestination": "checkout",
+                "contents": {
+                  "img": false,
+                  "button": false,
+                  "buttonWithQuantity": true,
+                  "title": false,
+                  "price": false
                 },
-                "quantityInput": {
-                  "border": "none !important",
-                  "font-size": "13px",
-                  "padding": "0",
-                  "width": "30px !important"
+                "text": {
+                  "button": "Buy now"
                 }
               },
-              "buttonDestination": "checkout",
-              "contents": {
-                "img": false,
-                "button": false,
-                "buttonWithQuantity": true,
-                "title": false,
-                "price": false
-              },
+            "cart": {
               "text": {
-                "button": "Buy now"
-              }
-            },
-          "cart": {
-            "text": {
-              "total": "Subtotal",
-              "button": "Checkout"
-            },
-            "popup": false
+                "total": "Subtotal",
+                "button": "Checkout"
+              },
+              "popup": false
+            }
           }
-        }
-      })
-  })
+        })
+      }
+    })
+    
   return (
           <div id="button"></div>
   )
