@@ -2,13 +2,13 @@ import React, { useLayoutEffect } from 'react'
 import ShopifyBuy from "@shopify/buy-button-js"
 import { graphql, useStaticQuery } from 'gatsby'
 
-
+import { document } from 'browser-monads'
 import { Base64 } from 'js-base64'
 
 import "../styles/revert-buy-button.scss"
 
 
-const ProductDetail = typeof document !== `undefined` ? ({ product }) => {
+const ProductDetail = ({ product }) => {
   useLayoutEffect(() => {
 
         const client = ShopifyBuy.buildClient({
@@ -19,7 +19,7 @@ const ProductDetail = typeof document !== `undefined` ? ({ product }) => {
         const decodded = Base64.decode(product.shopifyId);
         const acutalId = decodded.replace("gid://shopify/Product/", "");
 
-        const button = typeof document !== `undefined` ? document.getElementById("button") : null
+        const button = document.getElementById("button")
         
         ui.createComponent("product", {
             id: acutalId,
@@ -82,8 +82,6 @@ const ProductDetail = typeof document !== `undefined` ? ({ product }) => {
   return (
           <div id="button"></div>
   )
-} : () => {
- return null
 }
 
 const Cart = () => {
