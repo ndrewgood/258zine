@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Base64 } from 'js-base64'
-import ShopifyBuy from "@shopify/buy-button-js"
+// import ShopifyBuy from "@shopify/buy-button-js"
 
 import "../styles/revert-buy-button.scss"
 
