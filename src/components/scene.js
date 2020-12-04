@@ -3,28 +3,47 @@ import * as THREE from "three"
 import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import logo from '../images/258logo3.svg'
+import joey from '../images/joeytest.jpg'
+import joeyCube from '../images/joeycube.jpg'
+
+import nx from '../images/Park3Med/nx.jpg'
+import ny from '../images/Park3Med/ny.jpg'
+import nz from '../images/Park3Med/nz.jpg'
+import px from '../images/Park3Med/px.jpg'
+import py from '../images/Park3Med/py.jpg'
+import pz from '../images/Park3Med/pz.jpg'
 
 class Scene extends React.Component {
   componentDidMount() {
     let scene = new THREE.Scene()
-    // scene.background = new THREE.Color( 0xb0b0b0 );
+    scene.background = new THREE.Color( 0xcddde5 );
     this.camera = new THREE.PerspectiveCamera(75, this.mount.offsetWidth/this.mount.offsetHeight, 0.1, 1000)
 
-
+    
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setSize(this.mount.offsetWidth, this.mount.offsetHeight)
+    this.renderer.setPixelRatio( 2 );
     this.mount.appendChild(this.renderer.domElement)
 
     const controls = new OrbitControls( this.camera, this.renderer.domElement );
-	controls.screenSpacePanning = true;
+	  controls.screenSpacePanning = true;
     
 
     loadSVG(logo);
     const group = new THREE.Group();
 
-    // const helper = new THREE.GridHelper( 260, 20 );
-    // helper.rotation.x = Math.PI / 2;
-    // scene.add( helper );
+    let joeyImg = new THREE.TextureLoader().load( joey );
+
+    const urls = [
+      joeyCube, joeyCube,
+      joeyCube, joeyCube,
+      joeyCube, joeyCube
+    ];
+
+    const textureCube = new THREE.CubeTextureLoader().load( urls );
+    textureCube.mapping = THREE.CubeRefractionMapping;
+    // scene.background = textureCube;
+
 
 
     function loadSVG( url ) {
@@ -40,7 +59,14 @@ class Scene extends React.Component {
 					group.position.x = 0;
 					group.position.y = 0;
 			
-                    const material = new THREE.MeshNormalMaterial();
+          const material = new THREE.MeshBasicMaterial( {
+            color: 0x441815,
+            combine: THREE.AddOperation,
+            refractionRatio: 0.85, 
+            reflectivity: .7,
+            envMap: textureCube
+            
+          } );
 
 
 					for ( let i = 0; i < paths.length; i++ ) {
@@ -50,8 +76,13 @@ class Scene extends React.Component {
                         shapes.forEach((shape, j) => {
                             // Finally we can take each shape and extrude it
                             const geometry = new THREE.ExtrudeGeometry(shape, {
+                            steps: 6,
                             depth: 20,
-                            bevelEnabled: false
+                            bevelEnabled: true,
+                            bevelThickness: 1,
+                            bevelSize: 1,
+                            bevelOffset: -1,
+                            bevelSegments: 10
                             });
 
                             // Create a mesh and add it to the group
@@ -83,41 +114,7 @@ class Scene extends React.Component {
 				} );
     }
 
-	// var group = new THREE.Group();
-
-	// for ( var i = 0; i < svgData.paths.length; i ++ ) {
-
-	// 		var path = svgData.paths[ i ];
-
-	// 		var material = new THREE.MeshBasicMaterial( {
-	// 			color: path.color,
-	// 			side: THREE.DoubleSide,
-	// 			depthWrite: false
-	// 		} );
-
-	// 		var shapes = svgData.path.toShapes( true );
-
-	// 		for ( var j = 0; j < shapes.length; j ++ ) {
-    //             var extrudeSettings = {
-    //                 steps: 1,
-    //                 depth: -10,
-    //                 bevelEnabled: false
-    //             }
-	// 			var shape = shapes[ j ];
-	// 			var geometry = new THREE.ExtrudeBufferGeometry( shape, extrudeSettings );
-	// 			var mesh = new THREE.Mesh( geometry, material );
-	// 			group.add( mesh );
-
-	// 		}
-
-	// 	}
-
-	// scene.add( group );
-
-    // const Cgeometry = new THREE.BoxGeometry();
-    // const Cmaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
-    // const cube = new THREE.Mesh(Cgeometry, Cmaterial)
-    // scene.add(cube)
+    scene.add( new THREE.AmbientLight( 0x222222 ) );
 
     this.camera.position.z = 75
 
