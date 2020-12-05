@@ -1,6 +1,7 @@
 
 body {
     margin: 0;
+    background-color: rgb(160, 160, 160);
 }
 
 .container {
@@ -16,4 +17,13 @@ body {
     .black {
         color: black;
     }
+}
+
+.home-container {
+    justify-content: space-between;
+    height: 300px;
+}
+
+canvas:active {
+    cursor: grab;
 }
