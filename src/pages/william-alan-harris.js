@@ -11,7 +11,7 @@ const WilliamPage = () => (
     <SEO title="Home" />
     <div className="container">
       <Link to="/">Back Home</Link>
-      <h1>William Harris</h1>
+      <h1>William Alan Harris</h1>
     </div>
   </Layout>
 )

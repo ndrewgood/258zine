@@ -31,9 +31,9 @@ module.exports = {
       resolve: `gatsby-source-shopify`,
       options: {
         // The domain name of your Shopify shop.
-        shopName: `258-test.myshopify.com`,
+        shopName: `258-zine.myshopify.com`,
         // The storefront access token
-        accessToken: `106c29a8e7b0a5d0237cbcb80429183d`,
+        accessToken: `69968bc1590ce4025349e29b889dd80d`,
         verbose: true
       },
     },

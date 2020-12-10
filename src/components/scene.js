@@ -3,44 +3,45 @@ import * as THREE from "three"
 import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import logo from '../images/258logo3.svg'
-import joey from '../images/joeytest.jpg'
-import joeyCube from '../images/joeycube.jpg'
+import joeCube from '../images/joeCube.jpg'
+import ksCube from '../images/ksCube.jpg'
+import bkCube from '../images/bkCube.jpg'
+import hsCube from '../images/hsCube.jpg'
+import wahCube from '../images/wahCube.jpg'
+import rwCube from '../images/rwCube.jpg'
 
-import nx from '../images/Park3Med/nx.jpg'
-import ny from '../images/Park3Med/ny.jpg'
-import nz from '../images/Park3Med/nz.jpg'
-import px from '../images/Park3Med/px.jpg'
-import py from '../images/Park3Med/py.jpg'
-import pz from '../images/Park3Med/pz.jpg'
 
 class Scene extends React.Component {
+
+
+
   componentDidMount() {
     let scene = new THREE.Scene()
-    scene.background = new THREE.Color( 0xcddde5 );
+    // scene.background = new THREE.Color( 0xcddde5 );
     this.camera = new THREE.PerspectiveCamera(75, this.mount.offsetWidth/this.mount.offsetHeight, 0.1, 1000)
 
     
-    this.renderer = new THREE.WebGLRenderer();
+    this.renderer = new THREE.WebGLRenderer({ alpha: true });
     this.renderer.setSize(this.mount.offsetWidth, this.mount.offsetHeight)
     this.renderer.setPixelRatio( 2 );
     this.mount.appendChild(this.renderer.domElement)
 
     const controls = new OrbitControls( this.camera, this.renderer.domElement );
-	  controls.screenSpacePanning = true;
-    
+    controls.screenSpacePanning = true;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = -0.5;   
+    controls.enableDamping = true;
 
     loadSVG(logo);
     const group = new THREE.Group();
 
-    let joeyImg = new THREE.TextureLoader().load( joey );
-
     const urls = [
-      joeyCube, joeyCube,
-      joeyCube, joeyCube,
-      joeyCube, joeyCube
+      joeCube, hsCube,
+      bkCube, wahCube,
+      ksCube, rwCube
     ];
 
-    const textureCube = new THREE.CubeTextureLoader().load( urls );
+    let textureCube = new THREE.CubeTextureLoader().load(urls);
     textureCube.mapping = THREE.CubeRefractionMapping;
     // scene.background = textureCube;
 
@@ -60,7 +61,7 @@ class Scene extends React.Component {
 					group.position.y = 0;
 			
           const material = new THREE.MeshBasicMaterial( {
-            color: 0x441815,
+            color: 0x363c40,
             combine: THREE.AddOperation,
             refractionRatio: 0.85, 
             reflectivity: .7,
@@ -116,11 +117,13 @@ class Scene extends React.Component {
 
     scene.add( new THREE.AmbientLight( 0x222222 ) );
 
-    this.camera.position.z = 75
+    this.camera.position.z = 45
+
 
     this.animate = function () {
       requestAnimationFrame(this.animate.bind(this))
-      group.rotation.y += 0.005
+      group.rotation.y += 0.005;
+      controls.update();
       this.renderer.render(scene, this.camera)
     }
 
