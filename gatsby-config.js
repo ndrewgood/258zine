@@ -33,7 +33,7 @@ module.exports = {
         // The domain name of your Shopify shop.
         shopName: `258-zine.myshopify.com`,
         // The storefront access token
-        accessToken: `69968bc1590ce4025349e29b889dd80d`,
+        accessToken: `e7d4b831f0ea6cbb4aa80abcb146b7f6`,
         verbose: true
       },
     },

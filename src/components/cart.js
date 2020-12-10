@@ -21,8 +21,6 @@ const ProductDetail = typeof document !== 'undefined' ? ({ product }) => {
           storefrontAccessToken: "69968bc1590ce4025349e29b889dd80d"
         })
         const ui = ShopifyBuy.UI.init(client);
-        const decodded = Base64.decode(product.shopifyId);
-        const acutalId = decodded.replace("gid://shopify/Product/", "");
 
         const button = typeof document !== `undefined` ? document.getElementById("button") : null
 
@@ -74,7 +72,7 @@ const ProductDetail = typeof document !== 'undefined' ? ({ product }) => {
         }
 
         ui.createComponent("product", {
-            id: acutalId,
+            id: 6111154438324,
             node: button,
             options: {
               "product": {
@@ -151,28 +149,10 @@ const ProductDetail = typeof document !== 'undefined' ? ({ product }) => {
 
 const Cart = () => {
 
-  const data = useStaticQuery(graphql`
-  query ProductLayOutQuery {
-    shopifyProduct(handle: {eq: "25-8-zine-print"}) {
-        handle
-        title
-        description
-        descriptionHtml
-        id
-        shopifyId
-        variants {
-            sku
-            title
-            price
-            id
-        }
-    }
-}
-  `)
 
   return (
     <div>
-            <ProductDetail  product={data.shopifyProduct}/>
+            <ProductDetail />
     </div>
   )
 }
