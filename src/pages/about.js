@@ -11,7 +11,7 @@ import logo258 from '../images/258logo.svg';
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About" />
     <div className="back-button">
       <Link to="/">Back</Link>
     </div>

@@ -14,7 +14,7 @@ const BuyPage = () => {
 
     return (
       <Layout>
-          <SEO title="Buy" />
+          <SEO title="BUY BUY BUY" />
           <div className="back-button">
             <Link to="/">Back</Link>
           </div>
@@ -23,6 +23,7 @@ const BuyPage = () => {
                 <img className="buy-image" src={zineImage} alt=""/>
                 <p className="buy-title">25/8 Issue 01</p>
                 <p className="buy-price">$22</p>
+                <p className="buy-ship">Shipping Early Jan 2021</p>
             </div>       
           {typeof document !== 'undefined' ? <Cart /> : null}
 

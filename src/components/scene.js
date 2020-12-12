@@ -31,6 +31,7 @@ class Scene extends React.Component {
     controls.autoRotate = true;
     controls.autoRotateSpeed = -0.5;   
     controls.enableDamping = true;
+    controls.enablePan = false;
 
     loadSVG(logo);
     const group = new THREE.Group();

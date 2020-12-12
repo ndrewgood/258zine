@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `25/8 Zine`,
-    description: `By Artists, for Artists`,
-    author: `258 Zine`,
+    description: `A zine created to give voice to artists, designed from the idea that creativity is a continuously evolving pursuit that transcends the 24/7.`,
+    author: `@258.zine`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

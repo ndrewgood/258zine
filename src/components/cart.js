@@ -151,7 +151,7 @@ const Cart = () => {
 
 
   return (
-    <div>
+    <div className="buy-button-container">
             <ProductDetail />
     </div>
   )

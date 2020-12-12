@@ -9,18 +9,18 @@ import '../styles/main.scss'
 
 const SvgArrow = (props) => (
   <svg width="78" height="36" viewBox="0 0 78 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 18L76 18" stroke={props.color} stroke-width="2"/>
-    <path d="M59 35L76 18L59 0.999997" stroke={props.color} stroke-width="2"/>
+    <path d="M0 18L76 18" stroke={props.color} strokeWidth="2"/>
+    <path d="M59 35L76 18L59 0.999997" stroke={props.color} strokeWidth="2"/>
   </svg>
 
 )
 
-const defaultBg = "white"
+const defaultBg = "linear-gradient(56deg, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%)"
 const defaultTextStyle = "black"
 
-const joeTextStyle = "#782D36"
+const joeTextStyle = "#000000"
 
-const rwTextStyle = "#FF720E"
+const rwTextStyle = "#ff530f"
 
 const bkTextStyle = "#FFEB4B"
 
@@ -28,30 +28,30 @@ const wahTextStyle = "#FFFFFF"
 
 const ksTextStyle = "#60AA55"
 
-const hsTextStyle = "#A72C31"
+const hsTextStyle = "#ee1a21"
 
 const IndexPage = () => {
   const [bgHover, setBgHover] = useState(defaultBg);
   const [textHover, setTextHover] = useState(defaultTextStyle);
 
   const textStyle = {
-    WebkitTextStroke: "1px " + textHover
+    WebkitTextStroke: "1.5px " + textHover
   };
 
 return (
   <Layout bgColor="red">
-        <SEO title="Home" />
-    <div className="background" style={{backgroundColor: bgHover, transition: ".2s"}}>
+    <SEO title="25/8 Zine" />
+    <div className="background" style={{background: bgHover, transition: ".2s"}}>
       <div className="container home-container">
         <Link className="aboutLink" style={{color: textHover}} to="/about">About</Link>
           <div className="artist-container">
             <Link 
               style={textStyle}
               className="joe"
-              onMouseEnter={() => {setBgHover("white"); setTextHover(joeTextStyle); }} 
+              onMouseEnter={() => {setBgHover("#345536"); setTextHover(joeTextStyle); }} 
               onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
-              to="/joey-olusola-edgar">
-              Joey Olusola Edgar
+              to="/joseph-olusola-edgar">
+              Joseph Olusola Edgar
             </Link>
             <Link 
               style={textStyle}
@@ -88,7 +88,7 @@ return (
             <Link 
               style={textStyle}
               className="hs" 
-              onMouseEnter={() => {setBgHover("#223b4a"); setTextHover(hsTextStyle);}} 
+              onMouseEnter={() => {setBgHover("#000000"); setTextHover(hsTextStyle);}} 
               onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
               to="/hollow-sinatra">
               Hollow Sinatra
