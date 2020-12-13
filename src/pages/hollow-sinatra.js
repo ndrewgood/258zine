@@ -7,10 +7,10 @@ import SEO from "../components/seo"
 import '../styles/main.scss'
 
 import pics from '../images/hs.png'
-import text from '../images/hs-text.svg'
+import text from '../images/hs-text-white.svg'
 
 
-const color = "black";
+const color = "white";
 
 const Logo = (props) => (
   <svg className="logo" width="148" height="73" viewBox="0 0 148 73" fill={props.textColor} xmlns="http://www.w3.org/2000/svg">
@@ -25,6 +25,7 @@ const Logo = (props) => (
 
 const HollowPage = () => (
   <Layout>
+    <div style={{backgroundColor: "#000000"}} class="artistBG"></div>
     <SEO title="(25/8) Hollow Sinatra" />
     <div className="artistpage-nav">
       <Link className="artistpage-back" to="/" style={{color: color}}>Back</Link>
@@ -41,10 +42,10 @@ const HollowPage = () => (
         <img src={pics} alt="" srcset="" className="aristpage-image"/>
       </div>
       <img src={text} alt="" className="artistpage-name hs-text"/>
-      <p className="artistpage-title">Musician</p>
-      <p className="artistpage-body">Hollow Sinatra is an independent, self-taught creator. From instruments to lyrics, Sinatra does it all. At 16 he debuted his first EP tinged with contemporary hip-hop and trap influences. Since then, Sinatra’s sound has matured through “keeping that childlike mentality,” blending genres new and old, and pulling from a pool of well-developed influences.</p>
-      <p className="artistpage-cs">Full write-up in 25/8 Zine Issue 01...</p>
-      <Link className="artistpage-buy" to="/buy">BUY HERE</Link>
+      <p className="artistpage-title" style={{color: color}}>Musician</p>
+      <p className="artistpage-body" style={{color: color}}>Hollow Sinatra is an independent, self-taught creator. From instruments to lyrics, Sinatra does it all. At 16 he debuted his first EP tinged with contemporary hip-hop and trap influences. Since then, Sinatra’s sound has matured through “keeping that childlike mentality,” blending genres new and old, and pulling from a pool of well-developed influences.</p>
+      <p className="artistpage-cs" style={{color: color}}>Full write-up in 25/8 Zine Issue 01...</p>
+      <Link className="artistpage-buy" style={{color: color}} to="/buy">BUY HERE</Link>
     </div>
   </Layout>
 )

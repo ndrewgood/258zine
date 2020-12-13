@@ -482,6 +482,10 @@ input[type=number] {
     }
 }
 
+.artistpage-cs {
+    font-size: 22px;
+}
+
 .artistpage-name {
     margin-top: 50px;
     @media only screen and (max-width: 800px) {
@@ -515,7 +519,7 @@ input[type=number] {
         width: 470px;
     }
     @media only screen and (max-width: 500px) {
-        width: 380px;
+        width: 360px;
     }
 }
 
