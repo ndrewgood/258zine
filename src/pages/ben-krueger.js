@@ -42,7 +42,7 @@ const BenPage = () => (
         </div>
         <img src={text} alt="" className="artistpage-name bk-text"/>
         <p className="artistpage-title" style={{color: color}}>Photographer + film<br />developer + archivist</p>
-        <p className="artistpage-body" style={{color: color}}>If he’s ever caught you in the street, you may know Ben Krueger always has a camera. His photography captures locals in the mundane, friends partying, and city scenes where a single moment tells a momentous story.</p>
+        <p className="artistpage-body" style={{color: color}}>If he’s ever caught you in the street, you may know Ben Krueger always has a camera. His photography captures locals in the mundane, friends partying, and city scenes where a single moment tells a momentous story. Even though Ben Krueger began shooting film five years ago, it’s a thread that ties him to his family’s past, present, and future.</p>
         <p className="artistpage-cs" style={{color: color}}>Full write-up in 25/8 Zine Issue 01...</p>
         <Link className="artistpage-buy" to="/buy" style={{color: color}}>BUY HERE</Link>
       </div>

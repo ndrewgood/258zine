@@ -43,7 +43,7 @@ const JosephPage = () => (
         </div>
         <img src={text} alt="" className="artistpage-name joe-text"/>
         <p className="artistpage-title" style={{color: color}}>paint + multimedia</p>
-        <p className="artistpage-body" style={{color: color}}>Joseph Olusola Edgar, a Nigerian multimedia artist makes compelling artwork through painting, printmaking, and rug making.Through these various forms of self expression, he explores themes of identity and home, and how that has evolved in his transition to America.</p>
+        <p className="artistpage-body" style={{color: color}}>Joseph Olusola Edgar, a Nigerian multimedia artist makes compelling artwork through painting, printmaking, and rug making. Through these various forms of self expression, he explores themes of identity and home, and how that has evolved in his transition to America.</p>
         <p className="artistpage-cs" style={{color: color}}>Full write-up in 25/8 Zine Issue 01...</p>
         <Link className="artistpage-buy" to="/buy" style={{color: color}}>BUY HERE</Link>
       </div>

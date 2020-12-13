@@ -43,7 +43,7 @@ const HollowPage = () => (
       </div>
       <img src={text} alt="" className="artistpage-name hs-text"/>
       <p className="artistpage-title" style={{color: color}}>Musician</p>
-      <p className="artistpage-body" style={{color: color}}>Hollow Sinatra is an independent, self-taught creator. From instruments to lyrics, Sinatra does it all. At 16 he debuted his first EP tinged with contemporary hip-hop and trap influences. Since then, Sinatra’s sound has matured through “keeping that childlike mentality,” blending genres new and old, and pulling from a pool of well-developed influences.</p>
+      <p className="artistpage-body" style={{color: color}}>Hollow Sinatra is an independent, self-taught creator. From instruments to lyrics, Sinatra does it all. At 16 he debuted his first EP and since then, Sinatra’s sound has matured through “keeping that childlike mentality,” blending genres new and old, and pulling from a pool of well-developed influences to create his 2020 EP, Rapture.</p>
       <p className="artistpage-cs" style={{color: color}}>Full write-up in 25/8 Zine Issue 01...</p>
       <Link className="artistpage-buy" style={{color: color}} to="/buy">BUY HERE</Link>
     </div>

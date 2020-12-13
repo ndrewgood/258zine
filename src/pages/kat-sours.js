@@ -43,7 +43,7 @@ const KatPage = () => (
         </div>
         <img src={text} alt="" className="artistpage-name ks-text"/>
         <p className="artistpage-title" style={{color: color}}>Fibers Designer</p>
-        <p className="artistpage-body" style={{color: color}}>The fibers world of Kat Sours is pink, glittery, with a dash of ~feelings~. When describing her favorite colors she said, “One of my professors was like ‘you use really juvenile colors in a really sophisticated way’ which was probably the biggest compliment I’ve ever received in my life.” Her work consists of some printmaking and knitwork, but, she says, “I feel most comfortable or most free when I’m doing material development, which is like fabric manipulation. It’s manipulating materials to make them look like something they’re not.”</p>
+        <p className="artistpage-body" style={{color: color}}>The fibers world of Kat Sours is pink, glittery, with a dash of ~feelings~. Her work consists of some printmaking and knitwork, but, she says, “I feel most comfortable or most free when I’m doing material development, which is like fabric manipulation. It’s manipulating materials to make them look like something they’re not.”</p>
         <p className="artistpage-cs" style={{color: color}}>Full write-up in 25/8 Zine Issue 01...</p>
         <Link className="artistpage-buy" to="/buy" style={{color: color}}>BUY HERE</Link>
       </div>

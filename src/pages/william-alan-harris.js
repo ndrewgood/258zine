@@ -43,7 +43,7 @@ const WilliamPage = () => (
         </div>
         <img src={text} alt="" className="artistpage-name wah-text"/>
         <p className="artistpage-title" style={{color: color}}>videographer</p>
-        <p className="artistpage-body" style={{color: color}}>William Harris has always been a performer.  He’s a Florida native from the heart of Disney— celebration. As a kid, Harris split his time doing boyscouts, learning dance at a local studio, and making caricatures of himself in his High School video Production class. Harris still uses film to create new characters out himself, but his inspiration now includes artists like Aphex Twin and Alfred Hitchcock “I take huge inspiration from how Aphex Twin morphs himself”. He also cites Stanley Kubrick as his favorite film maker– “Stanley Kubrick is a god”.</p>
+        <p className="artistpage-body" style={{color: color}}>William Alan Harris is a multifaceted videographer from the Florida, where he grew up splitting his time between Boy Scouts, the local dance studio, and creating films out of video games with his next door neighbor. He still makes films, but now his inspirations include artists like Aphex Twin, Alfred Hitchcock, and Stanley Kubrick.</p>
         <p className="artistpage-cs" style={{color: color}}>Full write-up in 25/8 Zine Issue 01...</p>
         <Link className="artistpage-buy" to="/buy" style={{color: color}}>BUY HERE</Link>
       </div>
