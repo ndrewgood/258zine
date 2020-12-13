@@ -1,5 +1,10 @@
 @import url("https://use.typekit.net/yeq6iep.css");
 
+@font-face {
+    font-family: 'EuroseWideHeavy';
+    src:  url('../fonts/EuroseWideHeavy_Regular.ttf') format('ttf')
+}
+
 
 body {
     margin: 0;
@@ -22,6 +27,19 @@ body {
     .black {
         color: black;
     }
+}
+
+img, svg {
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -o-user-select: none !important;
+    user-select: none !important;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none !important;
 }
 
 .back-button {
@@ -70,6 +88,10 @@ canvas {
         @media only screen and (max-height: 650px) {
             font-size: 40px;
             line-height: 60px;
+        }
+        @media only screen and (max-width: 550px) {
+            font-size: 35px;
+            line-height: 52px;
         }
     }
     // 
@@ -327,6 +349,9 @@ canvas {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media only screen and (max-width: 700px) {
+        padding: 17px 30px;
+    }
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -347,6 +372,7 @@ input[type=number] {
     svg {
         margin-top: 5px;
     }
+    
     :hover {
         cursor: pointer;
     }
@@ -366,4 +392,149 @@ input[type=number] {
 
 .shopify-buy__quantity:focus {
     outline: none;
+}
+
+// ARTIST PAGE
+
+.artistBG {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -100000;
+}
+
+.artistpage-nav {
+    position: fixed;
+    z-index: 100;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    .logo {
+        width: 75px;
+
+    }
+    a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none !important;
+    }
+    a:hover {
+        font-style: italic;
+    }
+
+    .artistpage-back {
+        padding-bottom: 40px;
+        font-size: 25px !important;
+    }
+
+    .artistpage-back:hover {
+        font-style: normal !important;
+    }
+    @media only screen and (max-width: 800px) {
+        a {
+            display: none;
+        }
+        .artistpage-back {
+            display: block;
+        }
+    }
+
+}
+
+.artistpage-container {
+    margin-left: 350px;
+    width: calc(100vw - 350px);
+    @media only screen and (max-width: 800px) {
+        margin-left: 0;
+        width: 100vw;
+    }
+}
+
+.artistpage-imagecontainer {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 350px);
+    padding-top: 30px;
+    @media only screen and (max-width: 800px) {
+        width: 100vw;
+    }
+    img {
+        width: calc(100vw - 350px);
+        @media only screen and (max-width: 800px) {
+            width: 100vw;
+        }
+    }
+}
+
+.artistpage-title {
+    text-transform: uppercase;
+}
+
+.artistpage-title, .artistpage-body, .artistpage-cs, .artistpage-buy {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-right: 30px;
+    @media only screen and (max-width: 800px) {
+        padding: 0 30px;
+    }
+}
+
+.artistpage-name {
+    margin-top: 50px;
+    @media only screen and (max-width: 800px) {
+        padding: 0 30px;
+    }
+}
+
+.artistpage-buy {
+    color: black;
+    font-weight: 600;
+    padding-bottom: 100px;
+}
+
+.hs-font {
+    font-family: 'EuroseWideHeavy';
+    font-size: 50px !important;
+    @media only screen and (max-width: 800px) {
+        padding: 0 30px;
+    }
+}
+
+.joe-text, .wah-text {
+    width: 600px;
+    @media only screen and (max-width: 960px) {
+        width: 500px;
+    }
+    @media only screen and (max-width: 860px) {
+        width: 400px;
+    }
+    @media only screen and (max-width: 800px) {
+        width: 470px;
+    }
+    @media only screen and (max-width: 500px) {
+        width: 380px;
+    }
+}
+
+.rw-text, .ks-text {
+    width: 450px;
+    @media only screen and (max-width: 960px) {
+        width: 400px;
+    }
+    @media only screen and (max-width: 800px) {
+        width: 360px;
+    }
+    @media only screen and (max-width: 500px) {
+        width: 300px;
+    }
+}
+
+
+.bk-text {
+    width: 320px;
+    @media only screen and (max-width: 500px) {
+        width: 250px;
+    }
 }

@@ -14,7 +14,7 @@ const BuyPage = () => {
 
     return (
       <Layout>
-          <SEO title="BUY BUY BUY" />
+          <SEO title="(25/8) BUY BUY BUY" />
           <div className="back-button">
             <Link to="/">Back</Link>
           </div>

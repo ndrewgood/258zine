@@ -39,43 +39,19 @@ const IndexPage = () => {
   };
 
 return (
-  <Layout bgColor="red">
-    <SEO title="25/8 Zine" />
+  <Layout>
+    <SEO title="(25/8)" />
     <div className="background" style={{background: bgHover, transition: ".2s"}}>
       <div className="container home-container">
         <Link className="aboutLink" style={{color: textHover}} to="/about">About</Link>
           <div className="artist-container">
             <Link 
               style={textStyle}
-              className="joe"
-              onMouseEnter={() => {setBgHover("#345536"); setTextHover(joeTextStyle); }} 
+              className="hs" 
+              onMouseEnter={() => {setBgHover("#000000"); setTextHover(hsTextStyle);}} 
               onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
-              to="/joseph-olusola-edgar">
-              Joseph Olusola Edgar
-            </Link>
-            <Link 
-              style={textStyle}
-              className="rw" 
-              onMouseEnter={() => {setBgHover("#EDEDED"); setTextHover(rwTextStyle); }} 
-              onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
-              to="/romulus-wolf">
-              Romulus Wolf
-            </Link>
-            <Link 
-              style={textStyle}
-              className="bk" 
-              onMouseEnter={() => {setBgHover("#D7DDD3"); setTextHover(bkTextStyle);}} 
-              onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
-              to="/ben-krueger">
-              Ben Krueger
-            </Link>
-            <Link 
-              style={textStyle}
-              className="wah" 
-              onMouseEnter={() => {setBgHover("#DA3832"); setTextHover(wahTextStyle);}} 
-              onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
-              to="/william-alan-harris">
-              William Alan Harris
+              to="/hollow-sinatra">
+              Hollow Sinatra
             </Link>
             <Link 
               style={textStyle}
@@ -87,12 +63,41 @@ return (
             </Link>
             <Link 
               style={textStyle}
-              className="hs" 
-              onMouseEnter={() => {setBgHover("#000000"); setTextHover(hsTextStyle);}} 
+              className="wah" 
+              onMouseEnter={() => {setBgHover("#DA3832"); setTextHover(wahTextStyle);}} 
               onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
-              to="/hollow-sinatra">
-              Hollow Sinatra
+              to="/william-alan-harris">
+              William Alan Harris
             </Link>
+            <Link 
+              style={textStyle}
+              className="bk" 
+              onMouseEnter={() => {setBgHover("#D7DDD3"); setTextHover(bkTextStyle);}} 
+              onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
+              to="/ben-krueger">
+              Ben Krueger
+            </Link>
+            <Link 
+              style={textStyle}
+              className="rw" 
+              onMouseEnter={() => {setBgHover("#EDEDED"); setTextHover(rwTextStyle); }} 
+              onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
+              to="/romulus-wolf">
+              Romulus Wolf
+            </Link>
+            <Link 
+              style={textStyle}
+              className="joe"
+              onMouseEnter={() => {setBgHover("#345536"); setTextHover(joeTextStyle); }} 
+              onMouseLeave={() => {setBgHover(defaultBg); setTextHover(defaultTextStyle);}} 
+              to="/joseph-olusola-edgar">
+              Joseph Olusola Edgar
+            </Link>
+
+
+
+
+
           </div>
           <Link style={{border: "1.5px solid " + textHover}} to="/buy" className="button-container">
             <p style={{color: textHover}}>BUY THE ZINE</p>

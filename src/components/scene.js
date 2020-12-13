@@ -118,7 +118,12 @@ class Scene extends React.Component {
 
     scene.add( new THREE.AmbientLight( 0x222222 ) );
 
-    this.camera.position.z = 45
+    if (this.mount.offsetWidth < 600) {
+      this.camera.position.z = 70
+    } else {
+      this.camera.position.z = 45
+    }
+    
 
 
     this.animate = function () {
