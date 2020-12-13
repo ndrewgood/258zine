@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import '../styles/main.scss'
 
 import pics from '../images/hs.png'
+import text from '../images/hs-text.svg'
 
 
 const color = "black";
@@ -39,7 +40,7 @@ const HollowPage = () => (
       <div className="artistpage-imagecontainer">
         <img src={pics} alt="" srcset="" className="aristpage-image"/>
       </div>
-      <h1 className="hs-font">HOLLOW<br/>SINATRA</h1>
+      <img src={text} alt="" className="artistpage-name hs-text"/>
       <p className="artistpage-title">Musician</p>
       <p className="artistpage-body">Hollow Sinatra is an independent, self-taught creator. From instruments to lyrics, Sinatra does it all. At 16 he debuted his first EP tinged with contemporary hip-hop and trap influences. Since then, Sinatra’s sound has matured through “keeping that childlike mentality,” blending genres new and old, and pulling from a pool of well-developed influences.</p>
       <p className="artistpage-cs">Full write-up in 25/8 Zine Issue 01...</p>

@@ -462,6 +462,7 @@ input[type=number] {
     }
     img {
         width: calc(100vw - 350px);
+        height: 100%;
         @media only screen and (max-width: 800px) {
             width: 100vw;
         }
@@ -532,7 +533,7 @@ input[type=number] {
 }
 
 
-.bk-text {
+.bk-text, .hs-text {
     width: 320px;
     @media only screen and (max-width: 500px) {
         width: 250px;
