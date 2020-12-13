@@ -489,7 +489,7 @@ input[type=number] {
 .artistpage-name {
     margin-top: 50px;
     @media only screen and (max-width: 800px) {
-        padding: 0 30px;
+        padding: 0 0 0 30px;
     }
 }
 
@@ -519,7 +519,7 @@ input[type=number] {
         width: 470px;
     }
     @media only screen and (max-width: 500px) {
-        width: 360px;
+        width: 350px;
     }
 }
 
